@@ -1,0 +1,22 @@
+﻿@model CreateUserViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create User</h1>
+<br />
+<br />
+
+
+
+<form asp-action="Create" method="post">
+    <partial name="PartialViews/CreateEditUserPartial" />
+
+    <button type="submit" class="btn btn-primary mt-3">Create</button>
+</form>
+@section ValidateScripts {
+    
+    <partial name="_ValidationScriptsPartial" />
+}
+

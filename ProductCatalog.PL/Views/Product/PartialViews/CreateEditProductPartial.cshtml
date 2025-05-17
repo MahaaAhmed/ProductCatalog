@@ -1,0 +1,39 @@
+﻿@model ProductViewModel
+@inject ICategoryService _categoryService
+@{
+    var categories = new SelectList(await _categoryService.GetAllCategoriesAsync(), nameof(Category.Id), nameof(Category.Name));
+}
+<div class="form-group">
+    <label class="col-form-label" asp-for="Name"></label>
+    <input class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="Price"></label>
+    <input class="form-control" asp-for="Price" />
+    <span asp-validation-for="Price" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="Duration"></label>
+    <input class="form-control" asp-for="Duration" />
+    <span asp-validation-for="Duration" class="text-danger"></span>
+</div>
+@* <div class="form-group">
+    <label class="col-form-label" asp-for="CategoryName"></label>
+    <input class="form-control" asp-for="CategoryName" />
+    <span asp-validation-for="CategoryName" class="text-danger"></span>
+</div> *@
+
+<div class="form-group mb-3 col-6">
+    <label asp-for="CategoryId" class="form-label"></label>
+    <select class="form-control" asp-for="CategoryId" asp-items="@categories">
+        <option value="@null">Choose Category</option>
+    </select>
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="StartDate"></label>
+    <input class="form-control" asp-for="StartDate" />
+    <span asp-validation-for="StartDate" class="text-danger"></span>
+</div>

@@ -1,0 +1,24 @@
+﻿@model CreateUserViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit User</h1>
+<br />
+<br />
+
+<form asp-action="Edit" enctype="multipart/form-data">
+    
+   
+    <partial name="PartialViews/CreateEditUserPartial" />
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light"> Back To List </a>
+</form>
+@section ValidateScripts {
+    @*<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>*@
+    <partial name="_ValidationScriptsPartial" />
+}
+
