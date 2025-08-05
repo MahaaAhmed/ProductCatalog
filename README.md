@@ -1,14 +1,46 @@
-This Application show a global list of products, and whenever the application loads, it will return the products
-that are supposed to show up at the current time.
-Products are also categorized under categories. Categories are created as a seed to the db and will not
-be added using the application interface.
-Also Managing products (Add/Edit/Delete) allowed only for “Admin” users, so i use
-Identity to manage the user privileges.
-Also take in mind topics like security and proper error handling.
-Application include:
-• View that contains all products regardless of the current time (Admins Only).
-• The ability to add a new product (Admins Only).
-• The ability to edit an existing product (Admins Only).
-• The ability to delete an existing product (Admins Only).
-• The ability to filter products by category.
-• Details view for each product.
+🛒 Product Management System
+This ASP.NET Core MVC application provides a robust platform to manage a global list of products. Products are categorized and displayed based on their visibility time. Only users with Admin privileges can manage product records. The application also incorporates ASP.NET Identity for user authentication and role management, focusing on both security and error handling best practices.
+
+🔧 Features
+🕒 Load and display products that are available at the current time
+
+🗂️ Products are grouped into predefined Categories (seeded in the database)
+
+🧑‍💼 Admin-Only Features:
+
+View all products, regardless of time
+
+Add new products
+
+Edit existing products
+
+Delete existing products
+
+🔍 Filter products by category
+
+🔎 View detailed information for each product
+
+🔐 Role-based access control using ASP.NET Identity
+
+🛡️ Secure and structured error handling throughout the app
+
+🏗️ Technologies Used
+ASP.NET Core MVC
+
+Entity Framework Core
+
+ASP.NET Core Identity
+
+SQL Server
+
+Repository Pattern
+
+Role-based Authentication
+
+Data Seeding
+
+Model Validation
+
+Custom Error Handling
+
+
